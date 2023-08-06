@@ -9,6 +9,6 @@ router.route("/").post(auth.verifyToken, scheduleCtrl.createSchedule)
     .delete(auth.verifyToken, scheduleCtrl.deleteSchedule);
 
 router.route("/tutor/:tutorId").get(scheduleCtrl.getAvailabilityByTutor);
-router.route("/course/:course").get(scheduleCtrl.getAvailabilityByTutor);
+router.route("/course/:course").get(scheduleCtrl.getAvailabilityByCourse);
 
 export default router;
