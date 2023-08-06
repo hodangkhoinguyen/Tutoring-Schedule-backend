@@ -1,6 +1,6 @@
 import express from 'express';
-import appointmentCtrl from '../controller/appointment.controller.js';
-import auth from '../middleware/auth.js';
+import appointmentCtrl from '../controller/appointment.controller';
+import auth from '../middleware/auth';
 
 const router = express.Router();
 

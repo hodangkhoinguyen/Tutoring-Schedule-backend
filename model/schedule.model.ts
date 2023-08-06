@@ -7,12 +7,15 @@ const Schedule = mongoose.model('Schedule',
             ref: "User"
         },
         /* 
-            Schedule format
-            "monday": [[start, end], [start, end]],
-            "tuesday": [[start, end], [start, end]]
+            Schedule format: time is every 30 minutes
+            {
+                0: [[start, end], [start, end], ...], // Monday
+                1: [[start, end], [start, end], ...], // Tuesday
+                2: [[start, end], [start, end], ...], // Wednesday
+            }
             ...
         */
-        schedule: Object
+        time: Object
     },
         { timestamps: true })
 );

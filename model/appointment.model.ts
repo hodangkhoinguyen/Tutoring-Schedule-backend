@@ -12,6 +12,7 @@ const Appointment = mongoose.model('Appointment',
             type: mongoose.Schema.Types.ObjectId,
             ref: "User"
         },
+        status: String,
         note: String,
         file: [String]
     },
