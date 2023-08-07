@@ -1,12 +1,14 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const Schedule = mongoose.model('Schedule',
-    new mongoose.Schema({
-        tutorId: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "User"
-        },
-        /* 
+const Schedule = mongoose.model(
+    'Schedule',
+    new mongoose.Schema(
+        {
+            tutorId: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'User',
+            },
+            /* 
             Schedule format: time is every 30 minutes
             {
                 0: [[start, end], [start, end], ...], // Monday
@@ -15,9 +17,10 @@ const Schedule = mongoose.model('Schedule',
             }
             ...
         */
-        time: Object
-    },
-        { timestamps: true })
+            time: Object,
+        },
+        { timestamps: true },
+    ),
 );
 
 export default Schedule;

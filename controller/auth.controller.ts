@@ -59,7 +59,7 @@ async function signIn(req: Request, res: Response) {
             });
         }
         const roles = user.roles;
-        var token = jwt.sign({ id: user._id}, process.env.ACCESS_TOKEN_SECRET || '');
+        var token = jwt.sign({ id: user._id }, process.env.ACCESS_TOKEN_SECRET || '');
 
         return res.json({
             id: user._id,

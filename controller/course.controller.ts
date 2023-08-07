@@ -14,7 +14,7 @@ async function getAllCourses(req: Request, res: Response) {
 }
 
 const courseCtrl = {
-    getAllCourses
+    getAllCourses,
 };
 
 export default courseCtrl;

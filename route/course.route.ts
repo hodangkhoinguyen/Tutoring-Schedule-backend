@@ -3,6 +3,6 @@ import courseCtrl from '../controller/course.controller';
 
 const router = express.Router();
 
-router.route("/").get(courseCtrl.getAllCourses);
+router.route('/').get(courseCtrl.getAllCourses);
 
 export default router;

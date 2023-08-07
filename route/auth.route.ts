@@ -4,7 +4,7 @@ import auth from '../middleware/auth';
 
 const router = express.Router();
 
-router.route("/signin").post(authCtrl.signIn);
-router.route("/signup").post(auth.checkDuplicateEmail, authCtrl.signUp);
-router.route("/verify").post(auth.verifyToken);
+router.route('/signin').post(authCtrl.signIn);
+router.route('/signup').post(auth.checkDuplicateEmail, authCtrl.signUp);
+router.route('/verify').post(auth.verifyToken);
 export default router;
